@@ -1,6 +1,6 @@
 def call(Map config = [:]) {
-    String svcAccount = config.serviceAccountName ?: 'default'
-    String mavenSettingsId = config.mavenSettingsConfig ?: 'nexus-settings'
+    String svcAccount = config.serviceAccountName
+    String mavenSettingsId = config.mavenSettingsConfig
 
     pipeline {
         agent {
@@ -27,7 +27,7 @@ spec:
         }
         environment {
             SONARQUBE_SCANNER_HOME = tool 'SonarQubeScanner'
-            NEXUS_CREDENTIALS_ID   = config.nexusCredentialsId ?: 'nexus-docker-creds'
+            NEXUS_CREDENTIALS_ID   = config.nexusCredentialsId
             IMAGE_NAME             = config.imageName
             IMAGE_TAG              = config.imageTag
             GROUP_ID               = config.groupId
