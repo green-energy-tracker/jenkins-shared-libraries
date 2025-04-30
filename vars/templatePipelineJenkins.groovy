@@ -1,5 +1,7 @@
 def call(Map config = [:]) {
     String svcAccount = config.serviceAccountName ?: 'default'
+    String mavenSettingsId = config.mavenSettingsConfig ?: 'nexus-settings'
+
     pipeline {
         agent {
             kubernetes {
@@ -25,13 +27,10 @@ spec:
         }
         environment {
             SONARQUBE_SCANNER_HOME = tool 'SonarQubeScanner'
-            NEXUS_CREDENTIALS_ID = config.nexusCredentialsId ?: 'nexus-docker-creds'
-            IMAGE_NAME = config.imageName
-            IMAGE_TAG = config.imageTag
-            GROUP_ID   = config.groupId
-        }
-        tools {
-            maven 'M3'
+            NEXUS_CREDENTIALS_ID   = config.nexusCredentialsId ?: 'nexus-docker-creds'
+            IMAGE_NAME             = config.imageName
+            IMAGE_TAG              = config.imageTag
+            GROUP_ID               = config.groupId
         }
         stages {
             stage('Checkout') {
@@ -42,8 +41,8 @@ spec:
             stage('Build package') {
                 steps {
                     withCredentials([usernamePassword(credentialsId: "${NEXUS_CREDENTIALS_ID}", usernameVariable: 'NEXUS_USERNAME', passwordVariable: 'NEXUS_PASSWORD')]) {
-                        withMaven(mavenSettingsConfig: 'nexus-settings') {
-                            sh 'mvn clean package'
+                        configFileProvider([configFile(fileId: mavenSettingsId, variable: 'MAVEN_SETTINGS')]) {
+                            sh "mvn clean package --settings $MAVEN_SETTINGS"
                         }
                     }
                 }
@@ -58,8 +57,8 @@ spec:
             stage('Build Image') {
                 steps {
                     withCredentials([usernamePassword(credentialsId: "${NEXUS_CREDENTIALS_ID}", usernameVariable: 'NEXUS_USERNAME', passwordVariable: 'NEXUS_PASSWORD')]) {
-                        withMaven(mavenSettingsConfig: 'nexus-settings') {
-                            sh 'mvn jib:build -DsendCredentialsOverHttp=true'
+                        configFileProvider([configFile(fileId: mavenSettingsId, variable: 'MAVEN_SETTINGS')]) {
+                            sh "mvn compile jib:build -DsendCredentialsOverHttp=true --settings $MAVEN_SETTINGS"
                         }
                     }
                 }
