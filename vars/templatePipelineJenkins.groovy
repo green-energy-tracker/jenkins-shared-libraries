@@ -7,12 +7,12 @@ def call(Map config = [:]) {
             }
         }
         environment {
-            SONARQUBE_SCANNER_HOME = tool 'SonarQubeScanner'
-            NEXUS_CREDENTIALS_ID   = "${config.nexusCredentialsId}"
             IMAGE_NAME             = "${config.imageName}"
             IMAGE_TAG              = "${config.imageTag}"
             GROUP_ID               = "${config.groupId}"
-            MAVEN_SETTINGS_ID      = "${config.mavenSettingsConfig}"
+            MAVEN_SETTINGS_ID      = "nexus-settings"
+            NEXUS_CREDENTIALS_ID   = "nexus-docker-creds"
+            SONARQUBE_SCANNER_HOME = tool 'SonarQubeScanner'
         }
         stages {
             stage('Checkout') {
@@ -38,11 +38,16 @@ def call(Map config = [:]) {
             }
             stage('Build Image') {
                 steps {
-                    withCredentials([usernamePassword(credentialsId: "${NEXUS_CREDENTIALS_ID}", usernameVariable: 'NEXUS_USERNAME', passwordVariable: 'NEXUS_PASSWORD')]) {
-                        configFileProvider([configFile(fileId: MAVEN_SETTINGS_ID, variable: 'MAVEN_SETTINGS')]) {
-                            sh "mvn compile jib:build -DsendCredentialsOverHttp=true --settings $MAVEN_SETTINGS"
-                        }
+                    script {
+                        buildImageWithJib(
+                                nexusCredentialsId: "${NEXUS_CREDENTIALS_ID}",
+                                mavenSettingsId: "${MAVEN_SETTINGS_ID}",
+                                groupId: "${GROUP_ID}",
+                                imageName: "${IMAGE_NAME}",
+                                imageTag: "${IMAGE_TAG}"
+                        )
                     }
+
                 }
             }
             stage('Deploy on Minikube') {
