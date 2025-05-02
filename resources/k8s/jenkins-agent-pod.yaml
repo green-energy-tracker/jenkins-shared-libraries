@@ -21,4 +21,4 @@ spec:
   volumes:
     - name: m2-cache
       persistentVolumeClaim:
-        claimName: maven-cache-pvc
+        claimName: jenkins-maven-cache-pvc
