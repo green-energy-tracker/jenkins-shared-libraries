@@ -27,10 +27,10 @@ spec:
         }
         environment {
             SONARQUBE_SCANNER_HOME = tool 'SonarQubeScanner'
-            NEXUS_CREDENTIALS_ID   = config.nexusCredentialsId
-            IMAGE_NAME             = config.imageName
-            IMAGE_TAG              = config.imageTag
-            GROUP_ID               = config.groupId
+            NEXUS_CREDENTIALS_ID   = "${config.nexusCredentialsId}"
+            IMAGE_NAME             = "${config.imageName}"
+            IMAGE_TAG              = "${config.imageTag}"
+            GROUP_ID               = "${config.groupId}"
         }
         stages {
             stage('Checkout') {
