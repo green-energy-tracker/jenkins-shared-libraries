@@ -1,5 +1,4 @@
 def call(Map config = [:]) {
-    String svcAccount = config.serviceAccountName
     String mavenSettingsId = config.mavenSettingsConfig
 
     pipeline {
@@ -11,7 +10,7 @@ kind: Pod
 metadata:
   name: jenkins-agent
 spec:
-  serviceAccountName: ${svcAccount}
+  serviceAccountName: jenkins-agent
   containers:
     - name: maven
       image: maven:3.9.4-eclipse-temurin-17
