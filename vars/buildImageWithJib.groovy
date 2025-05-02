@@ -12,8 +12,7 @@ def call(Map config) {
             def JIB_MAVEN_PLUGIN_VERSION = '3.4.1'
             def REGISTRY_URL = 'nexus-registry.nexus.svc.cluster.local:64395'
             sh """
-                mvn compile \
-                    com.google.cloud.tools:jib-maven-plugin:${JIB_MAVEN_PLUGIN_VERSION}:build \
+                mvn com.google.cloud.tools:jib-maven-plugin:${JIB_MAVEN_PLUGIN_VERSION}:build \
                     --settings \$MAVEN_SETTINGS \
                     -Djib.from.image=${IMAGE_JIB_VERSION} \
                     -Djib.to.image=${REGISTRY_URL}/${config.groupId}/${config.imageName}:${config.imageTag} \
