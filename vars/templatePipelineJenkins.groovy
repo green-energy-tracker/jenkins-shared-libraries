@@ -1,26 +1,8 @@
 def call(Map config = [:]) {
-    String mavenSettingsId = config.mavenSettingsConfig
-
     pipeline {
         agent {
             kubernetes {
-                yaml '''
-apiVersion: v1
-kind: Pod
-metadata:
-  name: jenkins-agent
-spec:
-  serviceAccountName: jenkins-agent
-  containers:
-    - name: maven
-      image: maven:3.9.4-eclipse-temurin-17
-      command: ['cat']
-      tty: true
-    - name: kubectl
-      image: alpine/k8s:1.27.3
-      command: ['cat']
-      tty: true
-'''.stripIndent()
+                yaml libraryResource('k8s/jenkins-agent-pod.yaml')
                 defaultContainer 'maven'
             }
         }
@@ -30,6 +12,7 @@ spec:
             IMAGE_NAME             = "${config.imageName}"
             IMAGE_TAG              = "${config.imageTag}"
             GROUP_ID               = "${config.groupId}"
+            MAVEN_SETTINGS_ID      = "${config.mavenSettingsConfig}"
         }
         stages {
             stage('Checkout') {
@@ -40,7 +23,7 @@ spec:
             stage('Build package') {
                 steps {
                     withCredentials([usernamePassword(credentialsId: "${NEXUS_CREDENTIALS_ID}", usernameVariable: 'NEXUS_USERNAME', passwordVariable: 'NEXUS_PASSWORD')]) {
-                        configFileProvider([configFile(fileId: mavenSettingsId, variable: 'MAVEN_SETTINGS')]) {
+                        configFileProvider([configFile(fileId: MAVEN_SETTINGS_ID, variable: 'MAVEN_SETTINGS')]) {
                             sh "mvn clean package --settings $MAVEN_SETTINGS"
                         }
                     }
@@ -56,7 +39,7 @@ spec:
             stage('Build Image') {
                 steps {
                     withCredentials([usernamePassword(credentialsId: "${NEXUS_CREDENTIALS_ID}", usernameVariable: 'NEXUS_USERNAME', passwordVariable: 'NEXUS_PASSWORD')]) {
-                        configFileProvider([configFile(fileId: mavenSettingsId, variable: 'MAVEN_SETTINGS')]) {
+                        configFileProvider([configFile(fileId: MAVEN_SETTINGS_ID, variable: 'MAVEN_SETTINGS')]) {
                             sh "mvn compile jib:build -DsendCredentialsOverHttp=true --settings $MAVEN_SETTINGS"
                         }
                     }
