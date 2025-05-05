@@ -29,14 +29,14 @@ def call(Map config = [:]) {
                     }
                 }
             }
-            stage('SonarQube Analysis') {
+            stage('SonarQube Analysis & Quality Gate') {
                 steps {
-                    withSonarQubeEnv('SonarQube') {
-                        sh "${SONARQUBE_SCANNER_HOME}/bin/sonar-scanner -Dsonar.projectKey=${IMAGE_NAME} -Dsonar.sources=src -Dsonar.java.binaries=target/classes"
+                    script {
+                      sonarQubeAnalysisWithGate(projectKey: IMAGE_NAME)
                     }
                 }
             }
-            stage('Build Image') {
+            stage('Build Image and Deploy on Nexus Registry') {
                 steps {
                     script {
                         buildImageWithJib(
