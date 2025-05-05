@@ -5,9 +5,7 @@ def call(Map config = [:]) {
     String projectKey   = config.projectKey
     String sources      = 'src'
     String binaries     = 'target/classes'
-    int timeoutMin      = 5
-    int maxRetries      = (timeoutMin * 60) / 30
-    int sleepingTime    = 3000
+
 
     try {
         // Run SonarQube scanner
@@ -20,34 +18,16 @@ def call(Map config = [:]) {
         }
         echo "✅ SonarQube analysis completed for project '${projectKey}'."
 
-        int retry = 0
-        def qg = null
-        timeout(time: timeoutMin, unit: 'MINUTES') {
-            script {
-                while (retry < maxRetries) {
-                    try {
-                        qg = waitForQualityGate()
-                        if (qg.status == 'IN_PROGRESS') {
-                            echo "⏳ Quality Gate still in progress... retrying in 30 seconds"
-                            sleep(sleepingTime)
-                            retry++
-                        } else {
-                            break
-                        }
-                    } catch (err) {
-                        echo "⚠️ waitForQualityGate() failed on attempt ${retry + 1}: ${err}"
-                        sleep(sleepingTime)
-                        retry++
-                    }
-                }
-
-                if (!qg || qg.status == 'IN_PROGRESS') {
-                    error("❌ Quality Gate timeout: status still IN_PROGRESS after ${timeoutMin} minutes.")
-                } else if (qg.status != 'OK') {
-                    error("❌ SonarQube Quality Gate failed: ${qg.status}")
-                } else {
-                    echo "✅ SonarQube Quality Gate passed: ${qg.status}"
-                }
+        echo "⏳ Attendo generazione Quality Gate..."
+        sleep(5000)
+        script {
+            def qg = waitForQualityGate()
+            if (qg.status == 'IN_PROGRESS') {
+                error("⚠️ Quality Gate ancora in stato 'IN_PROGRESS'. Interrompo la pipeline.")
+            } else if (qg.status != 'OK') {
+                error("❌ SonarQube Quality Gate failed with status: ${qg.status}")
+            } else {
+                echo "✅ SonarQube Quality Gate passed: ${qg.status}"
             }
         }
     } catch (err) {
