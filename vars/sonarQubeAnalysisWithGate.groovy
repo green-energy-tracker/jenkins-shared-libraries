@@ -19,7 +19,7 @@ def call(Map config = [:]) {
         echo "✅ SonarQube analysis completed for project '${projectKey}'."
 
         echo "⏳ Attendo generazione Quality Gate..."
-        sleep time: 20, unit: 'SECONDS'
+        sleep(1)
         script {
             def qg = waitForQualityGate()
             if (qg.status == 'IN_PROGRESS') {
