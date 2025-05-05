@@ -18,6 +18,13 @@ spec:
       imagePullPolicy: IfNotPresent
       command: ['cat']
       tty: true
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "250m"
+        limits:
+          memory: "512Mi"
+          cpu: "500m"
   volumes:
     - name: m2-cache
       persistentVolumeClaim:

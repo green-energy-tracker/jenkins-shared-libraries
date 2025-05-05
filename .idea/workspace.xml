@@ -1,8 +1,174 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/GitAcSoftware&quot;
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="36399884-5795-42a8-bd58-2e4d17c4c06f" name="Changes" comment="add enviroment" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "andreazemi94"
   }
-}</component>
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/green-energy-tracker/jenkins-shared-libraries.git",
+    "accountId": "f9146f8f-bb98-45a8-9e2f-ef87392f9dd0"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2wXW13qhAp32RCZ2lwOmsadiYo6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/andre/GitAcSoftware/green-energy-tracker/jenkins-shared-libraries"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="LiferayDockerServerConfiguration" factoryName="Liferay Docker Server">
+      <option name="passParentEnvironments" value="true" />
+      <option name="workspaceLocation" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="LiferayServerConfiguration" factoryName="Liferay Server">
+      <Liferay-Sever alternativeJrePath="" bundleLocation="" bundleType="" developerMode="true" gogoShellPort="11311" vmParameters="-Xmx2560m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m">
+        <envs>
+          <env name="PATH" value="$PROJECT_DIR$/../../../../../Program Files/Java/jdk-21/bin:C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files (x86)\apache-maven-3.9.9\bin;C:\Program Files\Java\jdk1.8.0_192\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files\Kubernetes\Minikube;C:\Program Files\Helm\windows-amd64;C:\Program Files\Mkcert;C:\Users\andre\AppData\Local\Programs\Python\Launcher\;C:\Users\andre\scoop\shims;C:\Users\andre\AppData\Local\Microsoft\WindowsApps;C:\Users\andre\AppData\Local\Programs\Microsoft VS Code\bin;" />
+          <env name="JAVA_HOME" value="$PROJECT_DIR$/../../../../../Program Files/Java/jdk-21" />
+        </envs>
+        <module name="jenkins-shared-libraries" />
+      </Liferay-Sever>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="36399884-5795-42a8-bd58-2e4d17c4c06f" name="Changes" comment="" />
+      <created>1746188180962</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746188180962</updated>
+    </task>
+    <task id="LOCAL-00001" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746189076699</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746189076699</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746189266345</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1746189266345</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746191261124</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746191261124</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746191626638</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746191626638</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746197267936</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1746197267936</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746198779869</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1746198779869</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746198790718</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1746198790719</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746199250849</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1746199250849</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746199732338</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1746199732338</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746200473250</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1746200473250</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746200644387</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1746200644387</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746206478818</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1746206478818</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add enviroment" />
+    <option name="LAST_COMMIT_MESSAGE" value="add enviroment" />
+  </component>
 </project>
