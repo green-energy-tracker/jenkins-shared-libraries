@@ -13,49 +13,39 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "andreazemi94"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;andreazemi94&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/green-energy-tracker/jenkins-shared-libraries.git",
-    "accountId": "f9146f8f-bb98-45a8-9e2f-ef87392f9dd0"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/green-energy-tracker/jenkins-shared-libraries.git&quot;,
+    &quot;accountId&quot;: &quot;f9146f8f-bb98-45a8-9e2f-ef87392f9dd0&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2wXW13qhAp32RCZ2lwOmsadiYo6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/andre/GitAcSoftware/green-energy-tracker/jenkins-shared-libraries"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/GitAcSoftware/green-energy-tracker/jenkins-shared-libraries&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="LiferayDockerServerConfiguration" factoryName="Liferay Docker Server">
       <option name="passParentEnvironments" value="true" />
       <option name="workspaceLocation" value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="LiferayServerConfiguration" factoryName="Liferay Server">
-      <Liferay-Sever alternativeJrePath="" bundleLocation="" bundleType="" developerMode="true" gogoShellPort="11311" vmParameters="-Xmx2560m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m">
-        <envs>
-          <env name="PATH" value="$PROJECT_DIR$/../../../../../Program Files/Java/jdk-21/bin:C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files (x86)\apache-maven-3.9.9\bin;C:\Program Files\Java\jdk1.8.0_192\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files\Kubernetes\Minikube;C:\Program Files\Helm\windows-amd64;C:\Program Files\Mkcert;C:\Users\andre\AppData\Local\Programs\Python\Launcher\;C:\Users\andre\scoop\shims;C:\Users\andre\AppData\Local\Microsoft\WindowsApps;C:\Users\andre\AppData\Local\Programs\Microsoft VS Code\bin;" />
-          <env name="JAVA_HOME" value="$PROJECT_DIR$/../../../../../Program Files/Java/jdk-21" />
-        </envs>
-        <module name="jenkins-shared-libraries" />
-      </Liferay-Sever>
       <method v="2" />
     </configuration>
   </component>
@@ -164,7 +154,95 @@
       <option name="project" value="LOCAL" />
       <updated>1746206478818</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746433069197</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1746433069197</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746435823053</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1746435823053</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746436946903</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1746436946903</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746440438619</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1746440438619</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746441769158</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1746441769158</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746442313845</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1746442313845</updated>
+    </task>
+    <task id="LOCAL-00019" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746443050429</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1746443050429</updated>
+    </task>
+    <task id="LOCAL-00020" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746444277282</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1746444277282</updated>
+    </task>
+    <task id="LOCAL-00021" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746444682370</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1746444682370</updated>
+    </task>
+    <task id="LOCAL-00022" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746445995247</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1746445995247</updated>
+    </task>
+    <task id="LOCAL-00023" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746446229099</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1746446229099</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
