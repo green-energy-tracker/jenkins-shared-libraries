@@ -8,7 +8,6 @@ def call(Map config = [:]) {
 
 
     try {
-        // Run SonarQube scanner
         withSonarQubeEnv(server) {
             String scannerHome = tool(scannerTool)
             sh "${scannerHome}/bin/sonar-scanner " +
@@ -18,12 +17,12 @@ def call(Map config = [:]) {
         }
         echo "✅ SonarQube analysis completed for project '${projectKey}'."
 
-        echo "⏳ Attendo generazione Quality Gate..."
+        echo "⏳ Waiting Quality Gate..."
         sleep(5)
         script {
             def qg = waitForQualityGate()
             if (qg.status == 'IN_PROGRESS') {
-                error("⚠️ Quality Gate ancora in stato 'IN_PROGRESS'. Interrompo la pipeline.")
+                error("⚠️ Quality Gate status 'IN_PROGRESS'. Aborting pipeline.")
             } else if (qg.status != 'OK') {
                 error("❌ SonarQube Quality Gate failed with status: ${qg.status}")
             } else {

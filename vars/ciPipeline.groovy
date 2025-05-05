@@ -58,10 +58,10 @@ def call(Map config = [:]) {
         }
         post {
             success {
-                echo 'Build completata con successo!'
+                echo '✅ Pipeline completed successfully!'
             }
             failure {
-                echo 'Errore nella build.'
+                echo '❌ Pipeline failed.'
             }
         }
     }

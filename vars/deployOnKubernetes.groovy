@@ -4,10 +4,8 @@ def call(Map config = [:]) {
 
 container('kubectl') {
     script {
-        // Apply the manifest
         sh "kubectl apply -f src/main/resources/k8s/deployment.yaml"
 
-        // Check for existing deployment
         echo "Checking if deployment '${imageName}' exists..."
         def exists = sh(
                 script: "kubectl get deployment ${imageName} --ignore-not-found",
