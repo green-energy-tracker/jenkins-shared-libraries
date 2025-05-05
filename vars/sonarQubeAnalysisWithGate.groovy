@@ -7,7 +7,7 @@ def call(Map config = [:]) {
     String binaries     = 'target/classes'
     int timeoutMin      = 5
     int maxRetries      = (timeoutMin * 60) / 30
-    int sleepingTime    = 30000
+    int sleepingTime    = 3000
 
     try {
         // Run SonarQube scanner
