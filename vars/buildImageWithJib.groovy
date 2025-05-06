@@ -10,7 +10,7 @@ def call(Map config) {
         )]) {
             def IMAGE_JIB_VERSION = 'openjdk:17-jdk-slim'
             def JIB_MAVEN_PLUGIN_VERSION = '3.4.1'
-            def REGISTRY_URL = 'http://nexus-registry.nexus.svc.cluster.local:64395'
+            def REGISTRY_URL = 'nexus-registry.nexus.svc.cluster.local:64395'
             sh """
                     mvn com.google.cloud.tools:jib-maven-plugin:${JIB_MAVEN_PLUGIN_VERSION}:build \
                     --settings \$MAVEN_SETTINGS \
