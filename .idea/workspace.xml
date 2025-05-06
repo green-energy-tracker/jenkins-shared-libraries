@@ -48,6 +48,16 @@
       <option name="workspaceLocation" value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="LiferayServerConfiguration" factoryName="Liferay Server">
+      <Liferay-Sever alternativeJrePath="" bundleLocation="" bundleType="" developerMode="true" gogoShellPort="11311" vmParameters="-Xmx2560m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m">
+        <envs>
+          <env name="PATH" value="$PROJECT_DIR$/../../../../../Program Files/Java/jdk-21/bin:C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files (x86)\apache-maven-3.9.9\bin;C:\Program Files\Java\jdk1.8.0_192\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files\Kubernetes\Minikube;C:\Program Files\Helm\windows-amd64;C:\Program Files\Mkcert;C:\Users\andre\AppData\Local\Programs\Python\Launcher\;C:\Users\andre\scoop\shims;C:\Users\andre\AppData\Local\Microsoft\WindowsApps;C:\Users\andre\AppData\Local\Programs\Microsoft VS Code\bin;" />
+          <env name="JAVA_HOME" value="$PROJECT_DIR$/../../../../../Program Files/Java/jdk-21" />
+        </envs>
+        <module name="jenkins-shared-libraries" />
+      </Liferay-Sever>
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -242,7 +252,31 @@
       <option name="project" value="LOCAL" />
       <updated>1746446229099</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746450176735</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1746450176735</updated>
+    </task>
+    <task id="LOCAL-00025" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746478266106</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1746478266106</updated>
+    </task>
+    <task id="LOCAL-00026" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746478900507</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1746478900507</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
