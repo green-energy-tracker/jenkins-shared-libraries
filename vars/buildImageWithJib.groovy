@@ -18,7 +18,7 @@ def call(Map config) {
                     -Djib.to.image=${REGISTRY_URL}/${config.groupId}/${config.imageName}:${config.imageTag} \
                     -Djib.to.auth.username=\$NEXUS_USERNAME \
                     -Djib.to.auth.password=\$NEXUS_PASSWORD \
-                    -Djib.allowInsecureRegistries=true \
+                    -DallowInsecureRegistries=true \
                     -DsendCredentialsOverHttp=true
                 """
         }
