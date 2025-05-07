@@ -8,10 +8,7 @@ def call(Map config) {
                 fileId: config.mavenSettingsId,
                 variable: 'MAVEN_SETTINGS'
         )]) {
-            sh """
-                    mvn jib:build -DsendCredentialsOverHttp=true \
-                    --settings \$MAVEN_SETTINGS 
-                """
+            sh 'mvn jib:build -DsendCredentialsOverHttp=true'
         }
     }
 }
