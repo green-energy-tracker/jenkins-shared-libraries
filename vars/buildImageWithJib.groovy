@@ -19,7 +19,7 @@ def call(Map config) {
                     -Djib.to.auth.username=\$NEXUS_USERNAME \
                     -Djib.to.auth.password=\$NEXUS_PASSWORD \
                     -Djib.allowInsecureRegistries=true \
-                    -DsendCredentialsOverHttp=true
+                    -Djib.sendCredentialsOverHttp=true
                 """
         }
     }
