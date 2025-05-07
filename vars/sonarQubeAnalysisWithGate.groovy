@@ -21,7 +21,9 @@ def call(Map config = [:]) {
         sleep(30)
         script {
             def qg = waitForQualityGate()
-            if (qg.status != 'OK') {
+            if (qg.status == 'IN_PROGRESS') {
+                error("⚠️ Quality Gate status 'IN_PROGRESS'. Aborting pipeline.")
+            } else if (qg.status != 'OK') {
                 error("❌ SonarQube Quality Gate failed with status: ${qg.status}")
             } else {
                 echo "✅ SonarQube Quality Gate passed: ${qg.status}"
