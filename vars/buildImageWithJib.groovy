@@ -8,8 +8,9 @@ def call(Map config) {
                 fileId: config.mavenSettingsId,
                 variable: 'MAVEN_SETTINGS'
         )]) {
+
             sh """
-                    mvn com.google.cloud.tools:jib-maven-plugin:${JIB_MAVEN_PLUGIN_VERSION}:build \
+                    mvn jib:build \
                     --settings \$MAVEN_SETTINGS 
                 """
         }
