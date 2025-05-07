@@ -10,7 +10,9 @@ def call(Map config) {
         )]) {
             sh """
                     mvn jib:build -DsendCredentialsOverHttp=true -Djib.allowInsecureRegistries=true\
-                    --settings \$MAVEN_SETTINGS 
+                    --settings \$MAVEN_SETTINGS \
+                    -Djib.to.auth.username=$NEXUS_USERNAME \
+                    -Djib.to.auth.password=$NEXUS_PASSWORD
                 """
         }
     }
