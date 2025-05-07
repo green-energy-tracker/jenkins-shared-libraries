@@ -9,7 +9,7 @@ def call(Map config) {
                 variable: 'MAVEN_SETTINGS'
         )]) {
             sh """
-                    mvn jib:build -DsendCredentialsOverHttp=true \
+                    mvn jib:build -DsendCredentialsOverHttp=true -Djib.allowInsecureRegistries=true\
                     --settings \$MAVEN_SETTINGS 
                 """
         }
