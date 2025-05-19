@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36399884-5795-42a8-bd58-2e4d17c4c06f" name="Changes" comment="add enviroment" />
+    <list default="true" id="36399884-5795-42a8-bd58-2e4d17c4c06f" name="Changes" comment="add enviroment">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,30 +59,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1746188180962</updated>
-    </task>
-    <task id="LOCAL-00001" summary="add enviroment">
-      <option name="closed" value="true" />
-      <created>1746189076699</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1746189076699</updated>
-    </task>
-    <task id="LOCAL-00002" summary="add enviroment">
-      <option name="closed" value="true" />
-      <created>1746189266345</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1746189266345</updated>
-    </task>
-    <task id="LOCAL-00003" summary="add enviroment">
-      <option name="closed" value="true" />
-      <created>1746191261124</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1746191261124</updated>
     </task>
     <task id="LOCAL-00004" summary="add enviroment">
       <option name="closed" value="true" />
@@ -434,7 +412,47 @@
       <option name="project" value="LOCAL" />
       <updated>1746627680456</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746632277365</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1746632277365</updated>
+    </task>
+    <task id="LOCAL-00049" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746648301177</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1746648301177</updated>
+    </task>
+    <task id="LOCAL-00050" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746648757206</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1746648757206</updated>
+    </task>
+    <task id="LOCAL-00051" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746649105338</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1746649105338</updated>
+    </task>
+    <task id="LOCAL-00052" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1746649732591</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1746649732591</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
