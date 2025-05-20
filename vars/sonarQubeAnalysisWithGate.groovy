@@ -11,7 +11,12 @@ def call(Map config = [:]) {
 
     try {
         withSonarQubeEnv(server) {
-            sh 'mvn sonar:sonar'
+            withCredentials([usernamePassword(credentialsId: "${NEXUS_CREDENTIALS_ID}", usernameVariable: 'NEXUS_USERNAME', passwordVariable: 'NEXUS_PASSWORD')]) {
+                configFileProvider([configFile(fileId: MAVEN_SETTINGS_ID, variable: 'MAVEN_SETTINGS')]) {
+                    sh "mvn sonar:sonar  --settings $MAVEN_SETTINGS"
+                }
+            }
+
         }
         echo "✅ SonarQube analysis completed for project '${projectKey}'."
 
