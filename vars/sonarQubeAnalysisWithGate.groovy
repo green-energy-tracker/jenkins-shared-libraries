@@ -3,8 +3,10 @@ def call(Map config = [:]) {
     String server       = 'SonarQube'
     String scannerTool  = 'SonarQubeScanner'
     String projectKey   = config.projectKey
-    String sources      = 'src'
-    String binaries     = 'target/classes'
+    String sourcesProd  = 'src/main/java'
+    String sourcesTest  = 'src/test/java'
+    String binariesProd = 'target/classes'
+    String binariesTest = 'target/test-classes'
 
 
     try {
@@ -12,8 +14,10 @@ def call(Map config = [:]) {
             String scannerHome = tool(scannerTool)
             sh "${scannerHome}/bin/sonar-scanner " +
                     "-Dsonar.projectKey=${projectKey} " +
-                    "-Dsonar.sources=${sources} " +
-                    "-Dsonar.java.binaries=${binaries}"
+                    "-Dsonar.sources=${sourcesProd} " +
+                    "-Dsonar.tests=${sourcesTest} " +
+                    "-Dsonar.java.binaries=${binariesProd} " +
+                    "-Dsonar.java.test.binaries=${binariesTest}"
         }
         echo "✅ SonarQube analysis completed for project '${projectKey}'."
 
