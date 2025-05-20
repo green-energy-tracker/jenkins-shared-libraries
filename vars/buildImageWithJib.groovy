@@ -1,13 +1,6 @@
 def call(Map config) {
-    withCredentials([usernamePassword(
-            credentialsId: config.nexusCredentialsId,
-            usernameVariable: 'NEXUS_USERNAME',
-            passwordVariable: 'NEXUS_PASSWORD'
-    )]) {
-        configFileProvider([configFile(
-                fileId: config.mavenSettingsId,
-                variable: 'MAVEN_SETTINGS'
-        )]) {
+    withCredentials([usernamePassword(credentialsId: "${NEXUS_CREDENTIALS_ID}", usernameVariable: 'NEXUS_USERNAME', passwordVariable: 'NEXUS_PASSWORD')]) {
+        configFileProvider([configFile(fileId: MAVEN_SETTINGS_ID, variable: 'MAVEN_SETTINGS')]) {
             def IMAGE_JIB_VERSION = 'openjdk:17-jdk-slim'
             def JIB_MAVEN_PLUGIN_VERSION = '3.4.5'
             def REGISTRY_URL = 'nexus-registry.nexus.svc.cluster.local:64395'

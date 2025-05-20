@@ -12,15 +12,14 @@ def call(Map config = [:]) {
             GROUP_ID               = "${config.groupId}"
             MAVEN_SETTINGS_ID      = "nexus-settings"
             NEXUS_CREDENTIALS_ID   = "nexus-docker-creds"
-            SONARQUBE_SCANNER_HOME = tool 'SonarQubeScanner'
         }
         stages {
-            stage('Checkout') {
+            stage('Checkout code') {
                 steps {
                     checkout scm
                 }
             }
-            stage('Build package') {
+            stage('Compile & Test') {
                 steps {
                     withCredentials([usernamePassword(credentialsId: "${NEXUS_CREDENTIALS_ID}", usernameVariable: 'NEXUS_USERNAME', passwordVariable: 'NEXUS_PASSWORD')]) {
                         configFileProvider([configFile(fileId: MAVEN_SETTINGS_ID, variable: 'MAVEN_SETTINGS')]) {
@@ -29,28 +28,21 @@ def call(Map config = [:]) {
                     }
                 }
             }
-            stage('SonarQube Analysis & Quality Gate') {
+            stage('Code Quality Analysis') {
                 steps {
                     script {
-                      sonarQubeAnalysisWithGate(projectKey: IMAGE_NAME)
+                      sonarQubeAnalysis(projectKey: IMAGE_NAME)
                     }
                 }
             }
-            stage('Build Image and Deploy on Nexus Registry') {
+            stage('Build & Push Image') {
                 steps {
                     script {
-                        buildImageWithJib(
-                                nexusCredentialsId: "${NEXUS_CREDENTIALS_ID}",
-                                mavenSettingsId: "${MAVEN_SETTINGS_ID}",
-                                groupId: "${GROUP_ID}",
-                                imageName: "${IMAGE_NAME}",
-                                imageTag: "${IMAGE_TAG}"
-                        )
+                        buildImageWithJib( groupId: "${GROUP_ID}", imageName: "${IMAGE_NAME}", imageTag: "${IMAGE_TAG}" )
                     }
-
                 }
             }
-            stage('Deploy on Minikube') {
+            stage('Deploy to Kubernetes') {
                 steps {
                     deployOnKubernetes(imageName: "${IMAGE_NAME}")
                 }

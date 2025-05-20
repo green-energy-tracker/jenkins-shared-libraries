@@ -1,13 +1,7 @@
 def call(Map config = [:]) {
 
     String server       = 'SonarQube'
-    String scannerTool  = 'SonarQubeScanner'
     String projectKey   = config.projectKey
-    String sourcesProd  = 'src/main/java'
-    String sourcesTest  = 'src/test/java'
-    String binariesProd = 'target/classes'
-    String binariesTest = 'target/test-classes'
-    String coverageReport = 'target/site/jacoco/jacoco.xml'
 
     try {
         withSonarQubeEnv(server) {
