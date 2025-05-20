@@ -11,14 +11,7 @@ def call(Map config = [:]) {
 
     try {
         withSonarQubeEnv(server) {
-            String scannerHome = tool(scannerTool)
-            sh "${scannerHome}/bin/sonar-scanner " +
-                    "-Dsonar.projectKey=${projectKey} " +
-                    "-Dsonar.sources=${sourcesProd} " +
-                    "-Dsonar.tests=${sourcesTest} " +
-                    "-Dsonar.java.binaries=${binariesProd} " +
-                    "-Dsonar.java.test.binaries=${binariesTest} " +
-                    "-Dsonar.coverage.jacoco.xmlReportPaths=${coverageReport}"
+            sh 'mvn sonar:sonar'
         }
         echo "✅ SonarQube analysis completed for project '${projectKey}'."
 
