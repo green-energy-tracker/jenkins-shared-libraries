@@ -17,7 +17,7 @@ def call(Map config = [:]) {
                     "-Dsonar.sources=${sourcesProd} " +
                     "-Dsonar.tests=${sourcesTest} " +
                     "-Dsonar.java.binaries=${binariesProd} " +
-                    "-Dsonar.java.test.binaries=${binariesTest}" +
+                    "-Dsonar.java.test.binaries=${binariesTest} " +
                     "-Dsonar.coverage.jacoco.xmlReportPaths=${coverageReport}"
         }
         echo "✅ SonarQube analysis completed for project '${projectKey}'."
