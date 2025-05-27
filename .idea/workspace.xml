@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36399884-5795-42a8-bd58-2e4d17c4c06f" name="Changes" comment="add enviroment" />
+    <list default="true" id="36399884-5795-42a8-bd58-2e4d17c4c06f" name="Changes" comment="add enviroment">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,9 +41,14 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/GitAcSoftware/green-energy-tracker/jenkins-shared-libraries&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/GitAcSoftware/green-energy-tracker/jenkins-shared-libraries/vars&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\GitAcSoftware\green-energy-tracker\jenkins-shared-libraries\vars" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="LiferayDockerServerConfiguration" factoryName="Liferay Docker Server">
       <option name="passParentEnvironments" value="true" />
@@ -67,70 +74,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1746188180962</updated>
-    </task>
-    <task id="LOCAL-00005" summary="add enviroment">
-      <option name="closed" value="true" />
-      <created>1746197267936</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1746197267936</updated>
-    </task>
-    <task id="LOCAL-00006" summary="add enviroment">
-      <option name="closed" value="true" />
-      <created>1746198779869</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1746198779869</updated>
-    </task>
-    <task id="LOCAL-00007" summary="add enviroment">
-      <option name="closed" value="true" />
-      <created>1746198790718</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1746198790719</updated>
-    </task>
-    <task id="LOCAL-00008" summary="add enviroment">
-      <option name="closed" value="true" />
-      <created>1746199250849</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1746199250849</updated>
-    </task>
-    <task id="LOCAL-00009" summary="add enviroment">
-      <option name="closed" value="true" />
-      <created>1746199732338</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1746199732338</updated>
-    </task>
-    <task id="LOCAL-00010" summary="add enviroment">
-      <option name="closed" value="true" />
-      <created>1746200473250</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1746200473250</updated>
-    </task>
-    <task id="LOCAL-00011" summary="add enviroment">
-      <option name="closed" value="true" />
-      <created>1746200644387</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1746200644387</updated>
-    </task>
-    <task id="LOCAL-00012" summary="add enviroment">
-      <option name="closed" value="true" />
-      <created>1746206478818</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1746206478818</updated>
     </task>
     <task id="LOCAL-00013" summary="add enviroment">
       <option name="closed" value="true" />
@@ -460,7 +403,71 @@
       <option name="project" value="LOCAL" />
       <updated>1747660283413</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1747734963164</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1747734963165</updated>
+    </task>
+    <task id="LOCAL-00055" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1747735955017</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1747735955017</updated>
+    </task>
+    <task id="LOCAL-00056" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1747736278819</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1747736278819</updated>
+    </task>
+    <task id="LOCAL-00057" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1747736788599</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1747736788599</updated>
+    </task>
+    <task id="LOCAL-00058" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1747737288700</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1747737288700</updated>
+    </task>
+    <task id="LOCAL-00059" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1747737719210</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1747737719210</updated>
+    </task>
+    <task id="LOCAL-00060" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1747738678016</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1747738678016</updated>
+    </task>
+    <task id="LOCAL-00061" summary="add enviroment">
+      <option name="closed" value="true" />
+      <created>1747739357039</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1747739357039</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
