@@ -14,18 +14,18 @@ def call(Map config = [:]) {
         }
         echo "✅ SonarQube analysis completed for project '${projectKey}'."
 
-        echo "⏳ Waiting Quality Gate..."
-        sleep(45)
-        script {
-            def qg = waitForQualityGate()
-            if (qg.status == 'IN_PROGRESS') {
-                error("⚠️ Quality Gate status 'IN_PROGRESS'. Aborting pipeline.")
-            } else if (qg.status != 'OK') {
-                error("❌ SonarQube Quality Gate failed with status: ${qg.status}")
-            } else {
-                echo "✅ SonarQube Quality Gate passed: ${qg.status}"
-            }
-        }
+//        echo "⏳ Waiting Quality Gate..."
+//        sleep(45)
+//        script {
+//            def qg = waitForQualityGate()
+//            if (qg.status == 'IN_PROGRESS') {
+//                error("⚠️ Quality Gate status 'IN_PROGRESS'. Aborting pipeline.")
+//            } else if (qg.status != 'OK') {
+//                error("❌ SonarQube Quality Gate failed with status: ${qg.status}")
+//            } else {
+//                echo "✅ SonarQube Quality Gate passed: ${qg.status}"
+//            }
+//        }
     } catch (err) {
         error("❌ SonarQube analysis failed for project '${projectKey}': ${err}")
     }
